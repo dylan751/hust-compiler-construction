@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include<stdlib.h>
-#define CONSTANT 100
+
 //Linklist
 typedef int elementtype; //Must fix
 
