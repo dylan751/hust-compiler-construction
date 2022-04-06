@@ -76,9 +76,9 @@ int main (int argc, char const *argv[]) {
 	makeNullTree(&wordTree);
 	makeNullTree(&stopTree);
 	
-	ReadFile("../stopw.txt", &stopTree, &wordTree);//build stop word
+	ReadFile("../textFiles/stopw.txt", &stopTree, &wordTree);//build stop word
 
-	ReadFile("../alice30.txt", &wordTree, &stopTree);//buil need to read word
+	ReadFile("../textFiles/alice30.txt", &wordTree, &stopTree);//buil need to read word
 
 	InOrderPrint(wordTree);
 
