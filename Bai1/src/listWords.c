@@ -5,16 +5,16 @@
 
 #include"tree.h"
 
-treetype searchTreeByWord (treetype T, char* word) {//Search
-	elmType wordData;
+treeType searchTreeByWord (treeType T, char* word) {//Search
+	elementType wordData;
 	strcpy(wordData.word, word);
-	return searchT(T, wordData);
+	return searchTree(T, wordData);
 }
 
-void AddWord (treetype* wordTree ,char *word, int line) {
-	treetype currentWord = searchTreeByWord(*wordTree, word);
+void AddWord (treeType* wordTree ,char *word, int line) {
+	treeType currentWord = searchTreeByWord(*wordTree, word);
 	if (currentWord == NULL) {
-		elmType wordData;
+		elementType wordData;
 		strcpy(wordData.word, word);
 		wordData.appearCount=1;
 		makeNullList(&(wordData.rootLine), &(wordData.curLine), &(wordData.tailLine));
@@ -27,7 +27,7 @@ void AddWord (treetype* wordTree ,char *word, int line) {
 	}
 }
 
-void ReadFile (char* fileName ,treetype* wordTree, treetype* stopTree) {
+void ReadFile (char* fileName ,treeType* wordTree, treeType* stopTree) {
 	char c, prevC;
 	int count, line;
 	char word[20];
@@ -72,7 +72,7 @@ void ReadFile (char* fileName ,treetype* wordTree, treetype* stopTree) {
 }
 
 int main (int argc, char const *argv[]) {
-	treetype wordTree, stopTree;
+	treeType wordTree, stopTree;
 	makeNullTree(&wordTree);
 	makeNullTree(&stopTree);
 	

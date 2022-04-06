@@ -1,33 +1,29 @@
-
 #include<stdio.h>
 #include <string.h>
 #include <stdbool.h>
 #include<stdlib.h>
 
 #include"linkedList.h"
-#define CONSTANT 100
-
 
 //BST
-
 typedef struct elm{
 	char word[50];
 	int appearCount;
 	dblist *rootLine, *curLine, *tailLine;
-}elmType;
+}elementType;
 
 typedef struct node_type{
-  elmType element;
+  elementType element;
   struct node_type *left,*right;
 }nodeType;
 
-typedef nodeType *treetype;//treetype a <=> nodeType* a
+typedef nodeType *treeType;//treeType a <=> nodeType* a
 
-void makeNullTree(treetype* N){
+void makeNullTree(treeType* N){
   (*N)=NULL;
 }
 
-nodeType* Create_Node(elmType data){
+nodeType* Create_Node(elementType data){
   nodeType* New = (nodeType*)malloc(sizeof(nodeType));
   if(New!=NULL){
 	  New->element=data;
@@ -37,27 +33,27 @@ nodeType* Create_Node(elmType data){
   return New;
 }
 
-int isEmptyTree(treetype N){
+int isEmptyTree(treeType N){
 	return N==NULL;
 }
 
-treetype leftChild(treetype N){
+treeType leftChild(treeType N){
 	if(N!=NULL)return N->left;
 	else return NULL;
 }
 
-treetype rightChild(treetype N){
+treeType rightChild(treeType N){
 	if(N!=NULL)return N->right;
 	else return NULL;
 }
 
-int Compare(elmType a, elmType b){
+int Compare(elementType a, elementType b){
 	if(strcmp(a.word,b.word	)>0)return 1;
 	else if(strcmp(a.word,b.word)<0) return -1;
 	else return 0;
 }
 
-void insertNode(treetype* T,elmType data){
+void insertNode(treeType* T,elementType data){
 	if(*T==NULL)(*T)=Create_Node(data);
 	else{
 		if(Compare(data,(*T)->element)==1)insertNode(&(*T)->right,data);
@@ -65,19 +61,19 @@ void insertNode(treetype* T,elmType data){
 	}
 }
 
-int isLeaf(treetype N){
+int isLeaf(treeType N){
 	if(isEmptyTree(N)){
 		return 0;
 	}
 	else return(N->left==NULL&&N->right==NULL);
 }
 
-int countNode(treetype N){
+int countNode(treeType N){
 	if(isEmptyTree(N))return 0;
 	else return 1+countNode(N->left)+countNode(N->right);
 }
 
-void InOrderPrint(treetype T){
+void InOrderPrint(treeType T){
 	if(T!=NULL){
 		InOrderPrint(T->left);
 		printf("%s %d", T->element.word, T->element.appearCount);
@@ -93,7 +89,7 @@ int Max(int a, int b){
 	else return b;
 }
 
-int treeHeight(treetype T){
+int treeHeight(treeType T){
 	if(T==NULL){
 		return 0;
 	}
@@ -103,7 +99,7 @@ int treeHeight(treetype T){
 	}
 }
 
-int leafNode(treetype T){
+int leafNode(treeType T){
 	if(T==NULL){
 		return 0;
 	}
@@ -113,7 +109,7 @@ int leafNode(treetype T){
 	}
 }
 
-int innerNode(treetype T){
+int innerNode(treeType T){
 	if(T==NULL){
 		return 0;
 	}
@@ -123,7 +119,7 @@ int innerNode(treetype T){
 	}
 }
 
-int numRight(treetype T){
+int numRight(treeType T){
 	if(T==NULL){
 		return 0;
 	}
@@ -133,16 +129,16 @@ int numRight(treetype T){
 	}
 }
 
-treetype searchT(treetype T, elmType x){//Search
+treeType searchTree(treeType T, elementType x){//Search
 	if(T==NULL) return T;
 	if(Compare(x,T->element)==0) return T;
 	else if(isLeaf(T))return NULL;
-	else if(Compare(x,T->element)==1)return searchT(T->right,x);
-	else return searchT(T->left,x);
+	else if(Compare(x,T->element)==1)return searchTree(T->right,x);
+	else return searchTree(T->left,x);
 }
 
-elmType deletemin(treetype *n){
-  elmType k;
+elementType deletemin(treeType *n){
+  elementType k;
   if((*n)->left == NULL){
     k = (*n)->element;
     (*n) = (*n)->right;
@@ -151,7 +147,7 @@ elmType deletemin(treetype *n){
   else 
     return deletemin(&(*n)->left);
 }
-void deleteNode(treetype *n, elmType key){
+void deleteNode(treeType *n, elementType key){
   if(*n!=NULL){
     if(Compare(key,(*n)->element)==-1)
       deleteNode(&(*n)->left,key);
@@ -167,7 +163,7 @@ void deleteNode(treetype *n, elmType key){
       (*n)->element = deletemin(&(*n)->right);
   }
 }
-void freeTree(treetype T){
+void freeTree(treeType T){
 	if(T==NULL) return;
 	freeTree(T->left);
 	freeTree(T->right);
