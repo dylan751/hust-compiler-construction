@@ -22,3 +22,14 @@ make
 Cách biên dịch trên đã bao gồm các đoạn mã để so sánh kết quả và các test. Để xem kết quả trên terminal của từng ví dụ, thực thi lệnh dưới đây sau khi đã biên dịch make:
 
 ./scanner ../test/example1.kpl
+
+- Run bai3:
+```
+cd bai3/completed
+make
+./mytest.sh
+```
+
+Cách biên dịch trên đã bao gồm các đoạn mã để so sánh kết quả và các test. Để xem kết quả trên terminal của từng ví dụ, thực thi lệnh dưới đây sau khi đã biên dịch make:
+
+./parser ../test/example1.kpl
