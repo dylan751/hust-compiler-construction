@@ -21,7 +21,7 @@ BEGIN
      BEGIN
        CALL WRITEI(A(.I.));
        CALL WRITELN;
-     END;
+     END
 END;
 
 FUNCTION SUM : INTEGER;

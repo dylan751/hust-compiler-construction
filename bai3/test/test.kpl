@@ -1,0 +1,36 @@
+Program Example1; (* Example 1 *)
+Type arr = array(. 100 .) of integer;
+Var MATRIX : array(. 100 .) of arr;
+M : INTEGER;
+N : INTEGER;
+
+
+
+PROCEDURE INPUT;
+VAR I : INTEGER;
+J : INTEGER;
+BEGIN
+M := READI;
+N := READI;
+FOR I := 1 TO N DO
+FOR J := 1 TO M DO
+MATRIX(.I(.J.).) := READI;
+END;
+
+
+
+PROCEDURE OUTPUT;
+VAR I : INTEGER;
+J : INTEGER;
+BEGIN
+FOR I := 1 TO N DO
+FOR J := 1 TO M DO
+BEGIN
+CALL WRITEI(A(.I(.J.).));
+CALL WRITELN;
+END
+END;
+Begin
+    CALL INPUT;
+    CALL OUTPUT;
+End. (* Example 1 *)
