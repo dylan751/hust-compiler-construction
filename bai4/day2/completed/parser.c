@@ -56,12 +56,14 @@ void compileBlock(void) {
     do {
       eat(TK_IDENT);
 
+      // Tạo 1 Constant Object có tên là IDENT vừa đọc được
       constant = createConstantObject(currentToken->string);
       
       eat(SB_EQ);
       
       ConstantValue * c = compileConstant();
       constant->constAttrs->value  = c;
+      // Add Constant vào bảng symtab
       declareObject(constant);
 
       eat(SB_SEMICOLON);
@@ -137,16 +139,20 @@ void compileFuncDecl(void) {
   // TODO: create and declare a function object
   eat(KW_FUNCTION);
   eat(TK_IDENT);
+  // Tạo Function Object có name là IDENT vừa đọc được
   Object* obj = createFunctionObject(currentToken->string);
+  // Vào trong scope của Function Object
   enterBlock(obj->funcAttrs->scope);
 
   compileParams();
   eat(SB_COLON);
+  // Đọc kiểu trả về của Function sau dấu ':'
   obj->funcAttrs->returnType = compileBasicType();
   eat(SB_SEMICOLON);
 
   compileBlock();
   eat(SB_SEMICOLON);
+  // Out khỏi scope của Function Object này
   exitBlock();
 
   declareObject(obj);
@@ -156,7 +162,9 @@ void compileProcDecl(void) {
   // TODO: create and declare a procedure object
   eat(KW_PROCEDURE);
   eat(TK_IDENT);
+  // Tạo Procedure Object có name là IDENT vừa đọc được
   Object* obj = createProcedureObject(currentToken->string);
+  // Vào trong scope của Function Object
   enterBlock(obj->procAttrs->scope);
 
   compileParams();
@@ -164,6 +172,7 @@ void compileProcDecl(void) {
   compileBlock();
   eat(SB_SEMICOLON);
 
+  // Out khỏi scope của Function Object này
   exitBlock();
   declareObject(obj);
 }

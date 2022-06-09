@@ -14,7 +14,7 @@ void freeScope(Scope* scope);
 void freeObjectList(ObjectNode *objList);
 void freeReferenceList(ObjectNode *objList);
 
-SymTab* symtab;
+SymTab* symtab; // Bảng ký hiệu
 Type* intType;
 Type* charType;
 
