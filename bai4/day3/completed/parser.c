@@ -97,7 +97,7 @@ void compileBlock2(void) {
       // Get the actual type
       actualType = compileType();
       typeObj->typeAttrs->actualType = actualType;
-      // Declare the type object
+      // Declare the type object -> add to symtab Table
       declareObject(typeObj);
       
       eat(SB_SEMICOLON);
@@ -126,7 +126,7 @@ void compileBlock3(void) {
       // Get the variable type
       varType = compileType();
       varObj->varAttrs->type = varType;
-      // Declare the variable object
+      // Declare the variable object -> Add to symtab Table
       declareObject(varObj);
       
       eat(SB_SEMICOLON);
