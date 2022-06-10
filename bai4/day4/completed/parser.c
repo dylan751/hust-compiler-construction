@@ -450,6 +450,7 @@ void compileAssignSt(void) {
   eat(SB_ASSIGN);
   expType = compileExpression();
 
+  // Check vế trái và về phải của LỆNH GÁN có cùng kiểu dữ liệu không?
   checkTypeEquality(varType, expType);
 }
 
@@ -498,14 +499,18 @@ void compileForSt(void) {
   eat(KW_FOR);
   eat(TK_IDENT);
 
+  // Check xem IDENT đã được khai báo ở đâu chưa
   var = checkDeclaredVariable(currentToken->string);
 
   eat(SB_ASSIGN);
   type = compileExpression();
+  // FOR I:= 0 TO 10 DO
+  // Check I và 0 có cùng data type không
   checkTypeEquality(var->varAttrs->type, type);
 
   eat(KW_TO);
   type = compileExpression();
+  // Check I và 10 có cùng data type không
   checkTypeEquality(var->varAttrs->type, type);
 
   eat(KW_DO);
@@ -538,7 +543,7 @@ void compileArguments(ObjectNode* paramList) {
     while (lookAhead->tokenType == SB_COMMA) {
       eat(SB_COMMA);
       if (node == NULL)
-	error(ERR_PARAMETERS_ARGUMENTS_INCONSISTENCY, currentToken->lineNo, currentToken->colNo);
+	      error(ERR_PARAMETERS_ARGUMENTS_INCONSISTENCY, currentToken->lineNo, currentToken->colNo);
       compileArgument(node->object);
       node = node->next;
     }
@@ -579,6 +584,7 @@ void compileCondition(void) {
   Type* type2;
 
   type1 = compileExpression();
+  // Check xem type trong Condition có phải CHAR hoặc INT không
   checkBasicType(type1);
 
   switch (lookAhead->tokenType) {
@@ -610,6 +616,7 @@ void compileCondition(void) {
 
 Type* compileExpression(void) {
   Type* type;
+  Type* type1;
   
   switch (lookAhead->tokenType) {
   case SB_PLUS:
@@ -622,6 +629,16 @@ Type* compileExpression(void) {
     type = compileExpression2();
     checkIntType(type);
     break;
+  // Bài 1 đề thi thử
+  //  case KW_IF:
+  //   eat(KW_IF);
+  //   compileCondition();
+  //   eat(KW_THEN);
+  //   type = compileExpression();
+  //   eat(KW_ELSE);
+  //   type1 = compileExpression();
+  //   checkTypeEquality(type, type1);
+  //   break;
   default:
     type = compileExpression2();
   }
@@ -692,12 +709,14 @@ void compileTerm2(void) {
   case SB_TIMES:
     eat(SB_TIMES);
     type = compileFactor();
+    // Check Factor phải là INT
     checkIntType(type);
     compileTerm2();
     break;
   case SB_SLASH:
     eat(SB_SLASH);
     type = compileFactor();
+    // Check Factor phải là INT
     checkIntType(type);
     compileTerm2();
     break;
@@ -786,7 +805,9 @@ Type* compileIndexes(Type* arrayType) {
   while (lookAhead->tokenType == SB_LSEL) {
     eat(SB_LSEL);
     type = compileExpression();
+    // ARRAY(.a.) -> a phải là INT
     checkIntType(type);
+    // compileIndexes phải truyền vào kiểu ARRAY
     checkArrayType(arrayType);
     arrayType = arrayType->elementType;
     eat(SB_RSEL);

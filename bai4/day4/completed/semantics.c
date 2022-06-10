@@ -109,6 +109,7 @@ Object* checkDeclaredLValueIdent(char* name) {
   return obj;
 }
 
+// ========================== Day 4 ==========================
 
 void checkIntType(Type* type) {
   if ((type != NULL) && (type->typeClass == TP_INT))
