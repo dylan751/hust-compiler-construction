@@ -441,7 +441,49 @@ Type* compileLValue(void) {
   return varType;
 }
 
+// Bai 2 - De 1
+// void checkTypesEquality(Type **varList, Type **expList, int num) {
+//   for (int i = 0; i < num; i++)
+//     {
+//       // printf("%d, %d\n", varList[i]->typeClass, expList[i]->typeClass);
+//       checkTypeEquality(varList[i], expList[i]);
+//     }
+    
+// }
+
+
 void compileAssignSt(void) {
+  // Bai 2 - De 1
+  // Type* varList[15];
+  // Type* expList[15];
+  // int varNum = 0, expNum = 0;
+
+  // varList[varNum] = compileLValue();
+  // varNum++;
+
+  // while (lookAhead->tokenType == SB_COMMA)
+  // {
+  //   eat(SB_COMMA);
+  //   varList[varNum] = compileLValue();
+  //   varNum++;
+  // }
+    
+  // eat(SB_ASSIGN);
+
+  // expList[expNum] = compileExpression();
+  // expNum++;
+
+  // while (lookAhead->tokenType == SB_COMMA)
+  // {
+  //   eat(SB_COMMA);
+  //   expList[expNum] = compileExpression();
+  //   expNum++;
+  // }
+  
+  // if(varNum == expNum) {
+  //   checkTypesEquality(varList, expList, varNum);
+  // } else error(ERR_ASSIGN_NUM_NOT_EQUAL, currentToken->lineNo, currentToken->colNo);
+
   Type* varType;
   Type* expType;
 
@@ -629,7 +671,7 @@ Type* compileExpression(void) {
     type = compileExpression2();
     checkIntType(type);
     break;
-  // Bài 1 đề thi thử
+  // Bai 1 - De 1
   //  case KW_IF:
   //   eat(KW_IF);
   //   compileCondition();

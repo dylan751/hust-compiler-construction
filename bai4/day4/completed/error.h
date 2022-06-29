@@ -9,6 +9,7 @@
 #include "token.h"
 
 typedef enum {
+  // ERR_ASSIGN_NUM_NOT_EQUAL, // Bai 2 - De 1
   ERR_END_OF_COMMENT,
   ERR_IDENT_TOO_LONG,
   ERR_INVALID_CONSTANT_CHAR,

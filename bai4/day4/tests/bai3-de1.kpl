@@ -1,0 +1,26 @@
+Program bai3; (*bai3 thi thu 2016 *)
+(KPL nhập vào một dãy số, tính tổng các trị tuyệt đối của các số trong dãy)
+VAR N : integer;
+    I : integer;
+    SUM : integer;
+    arr : ARRAY(.100.) of integer;
+
+Function triTuyetDoi(n : integer) : integer;
+Begin
+    if n >= 0 then triTuyetDoi := n else triTuyetDoi := -n;
+End;
+
+Function tinhSum(n : integer, sum : integer): integer;
+Begin
+    tinhSum := sum + triTuyetDoi(n);
+End;
+
+BEGIN
+    N := READI;
+    SUM := 0;
+    for I := 1 to N do
+        Begin
+            arr(.I.) := READI;
+            SUM := tinhSum(arr(.I.), SUM);
+        End
+END.

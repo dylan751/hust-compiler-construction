@@ -16,6 +16,8 @@ struct ErrorMessage {
 };
 
 struct ErrorMessage errors[29] = {
+// struct ErrorMessage errors[30] = { // Bai 2 - De 1
+  // {ERR_ASSIGN_NUM_NOT_EQUAL, "Assign not equal."},
   {ERR_END_OF_COMMENT, "End of comment expected."},
   {ERR_IDENT_TOO_LONG, "Identifier too long."},
   {ERR_INVALID_CONSTANT_CHAR, "Invalid char constant."},
