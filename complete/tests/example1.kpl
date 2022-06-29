@@ -1,0 +1,8 @@
+Program Example1; (* Example 1 *)
+Begin
+CALL WRITEC('d');
+CALL WRITEC('u');
+CALL WRITEC('o');
+CALL WRITEC('n');
+CALL WRITEC('g');
+End. (* Example 1 *)

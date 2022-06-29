@@ -43,3 +43,32 @@ make
 ./symtab
 ```
 Xây dựng và in bảng kí hiệu cho 1 đoạn mã cụ thể trong file main.c
+
+---
+## complete + interpreter
+- 2 thư mục chứa code đầy đủ
+- `complete`: Sinh mã đích
+- `interpreter`: Thư mục để chạy chương trình
+
+### Cách biên dịch
+- `complete`:
+```
+- make clean
+- make
+- Usage: ./kplc input output [-dump]
+       input: input kpl program
+       output: executable
+       -dump: code dump
+```
+
+- `interpreter`:
+```
+- make clean
+- make
+- Usage: ./kplrun input [-s=stack_size] [-c=code_size] [-debug] [-dump]
+       input: input kpl program
+       -s=stack_size: set the stack size
+       -c=code_size: set the code size
+       -debug: enable code dump
+
+```

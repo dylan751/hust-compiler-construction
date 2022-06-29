@@ -9,6 +9,7 @@
         "ostream": "c",
         "typeinfo": "c",
         "algorithm": "c",
-        "complex": "c"
+        "complex": "c",
+        "stdio.h": "c"
     }
 }
