@@ -107,6 +107,7 @@ int emitLE(CodeBlock* codeBlock);
 
 int emitBP(CodeBlock* codeBlock);
 
+void sprintInstruction(char *buffer,Instruction* instruction);
 void printInstruction(Instruction* instruction);
 void printCodeBlock(CodeBlock* codeBlock);
 

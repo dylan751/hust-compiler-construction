@@ -107,6 +107,44 @@ void printInstruction(Instruction* inst) {
   }
 }
 
+void sprintInstruction(char* s, Instruction* inst) {
+  switch (inst->op) {
+  case OP_LA: sprintf(s,"LA %d,%d", inst->p, inst->q); break;
+  case OP_LV: sprintf(s, "LV %d,%d", inst->p, inst->q); break;
+  case OP_LC: sprintf(s, "LC %d", inst->q); break;
+  case OP_LI: sprintf(s, "LI"); break;
+  case OP_INT: sprintf(s, "INT %d", inst->q); break;
+  case OP_DCT: sprintf(s, "DCT %d", inst->q); break;
+  case OP_J: sprintf(s, "J %d", inst->q); break;
+  case OP_FJ: sprintf(s, "FJ %d", inst->q); break;
+  case OP_HL: sprintf(s,"HL"); break;
+  case OP_ST: sprintf(s,"ST"); break;
+  case OP_CALL: sprintf(s,"CALL %d,%d", inst->p, inst->q); break;
+  case OP_EP: sprintf(s,"EP"); break;
+  case OP_EF: sprintf(s,"EF"); break;
+  case OP_RC: sprintf(s,"RC"); break;
+  case OP_RI: sprintf(s,"RI"); break;
+  case OP_WRC: sprintf(s,"WRC"); break;
+  case OP_WRI: sprintf(s,"WRI"); break;
+  case OP_WLN: sprintf(s,"WLN"); break;
+  case OP_AD: sprintf(s,"AD"); break;
+  case OP_SB: sprintf(s,"SB"); break;
+  case OP_ML: sprintf(s,"ML"); break;
+  case OP_DV: sprintf(s,"DV"); break;
+  case OP_NEG: sprintf(s,"NEG"); break;
+  case OP_CV: sprintf(s,"CV"); break;
+  case OP_EQ: sprintf(s,"EQ"); break;
+  case OP_NE: sprintf(s,"NE"); break;
+  case OP_GT: sprintf(s,"GT"); break;
+  case OP_LT: sprintf(s,"LT"); break;
+  case OP_GE: sprintf(s,"GE"); break;
+  case OP_LE: sprintf(s,"LE"); break;
+
+  case OP_BP: sprintf(s,"BP"); break;
+  default: break;
+  }
+}
+
 void printCodeBlock(CodeBlock* codeBlock) {
   Instruction* pc = codeBlock->code;
   int i;
