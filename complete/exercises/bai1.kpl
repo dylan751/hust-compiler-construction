@@ -1,0 +1,19 @@
+PROGRAM bai1;
+    VAR n: INTEGER;
+        arr: ARRAY(. 100 .) OF INTEGER;
+        max: INTEGER;
+        i: INTEGER;
+BEGIN
+    n := READI;
+    FOR i:= 1 TO n DO
+        arr(.i.) := READI;
+
+    max := arr(.1.);
+    FOR i := 1 TO n DO
+        BEGIN
+            IF arr(.i.) > max THEN
+                max := arr(.i.)
+        END;
+    
+    CALL WRITEI(max);
+END.
