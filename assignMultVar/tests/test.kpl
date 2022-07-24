@@ -1,0 +1,16 @@
+Program testAssign;
+    Var x : integer;
+        y : integer;
+        z : char;
+Begin
+    x := 1;
+    y := 2;
+    z := 'A';
+
+    x, y, z := y, x, 'D';
+
+    call WriteI(x);
+    call WriteI(y);
+    call WriteC(z);
+
+End.

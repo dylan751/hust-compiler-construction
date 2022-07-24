@@ -1,0 +1,513 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Jul 24 11:49:16 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/nobi-nobita/Chuongtrinhdich/complete/completed
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/102
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+JOURNAL_STREAM = 8:67348
+# makefile (from 'Makefile', line 1)
+CFLAGS = -c -Wall
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+USERNAME = nobi-nobita
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=8bdaa8239793cd23a45cf61962dcaed6
+# environment
+MANAGERPID = 2053
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /home/nobi-nobita/Chuongtrinhdich/complete/completed
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/ubuntu:@/tmp/.ICE-unix/2260,unix/ubuntu:/tmp/.ICE-unix/2260
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/nobi-nobita/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+SNAP = /snap/code/102
+# environment
+SNAP_VERSION = 3b889b09
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+DISABLE_WAYLAND = 1
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+INVOCATION_ID = 0542a384621e4f0eaa9f277e4ae9f6dc
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3951
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/nobi-nobita/Chuongtrinhdich/complete/completed
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 2225
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/nobi-nobita
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/nobi-nobita/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+LOGNAME = nobi-nobita
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = GurMk4ioIWk5lwRTBU9LRMomYpw0yi00PQV7cPxwQIEgKpYBFEtb
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/nobi-nobita/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# environment
+SNAP_REAL_HOME = /home/nobi-nobita
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SNAP_USER_DATA = /home/nobi-nobita/snap/code/102
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 2)
+CC = gcc
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = nobi-nobita
+# environment
+SNAP_REVISION = 102
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-0fe22d6a-1.69.2-main.sock
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# automatic
++F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
+# environment
+QT_ACCESSIBILITY = 1
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = GurMk4ioIWk5lwRTBU9LRMomYpw0yi00PQV7cPxwQIEgKpYBFEtb
+# automatic
+<F = $(notdir $<)
+# environment
+SNAP_NAME = code
+# environment
+LC_ALL = C
+# environment
+DBUS_STARTER_BUS_TYPE = session
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# makefile (from 'Makefile', line 3)
+LIBS = -lm 
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/883f2cb5_082e_4354_b8fa_e393c170e16f
+# automatic
+^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.147
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 4104
+# environment
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=8bdaa8239793cd23a45cf61962dcaed6
+# variable set hash-table stats:
+# Load=125/1024=12%, Rehash=0, Collisions=16/150=11%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2053, inode 923467): 40 files, no impossibilities.
+
+# 40 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+scanner.o: scanner.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.398547491
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 14):
+	${CC} ${CFLAGS} scanner.c
+
+kplc: main.o parser.o scanner.o reader.o charcode.o token.o error.o symtab.o semantics.o debug.o instructions.o codegen.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:59.326555501
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 8):
+	${CC} main.o parser.o scanner.o reader.o charcode.o token.o error.o symtab.o semantics.o debug.o instructions.o codegen.o -o kplc
+
+instructions.o: instructions.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:59.03055294
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 41):
+	${CC} ${CFLAGS} instructions.c
+
+all: kplc
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+codegen.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+charcode.o: charcode.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.466548078
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 23):
+	${CC} ${CFLAGS} charcode.c
+
+semantics.o: semantics.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.802550973
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 35):
+	${CC} ${CFLAGS} semantics.c
+
+# Not a target:
+reader.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+symtab.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+debug.o: debug.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.882551664
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 38):
+	${CC} ${CFLAGS} debug.c
+
+# Not a target:
+scanner.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+error.o: error.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.582549077
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 29):
+	${CC} ${CFLAGS} error.c
+
+# Not a target:
+instructions.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+token.o: token.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.514548491
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 26):
+	${CC} ${CFLAGS} token.c
+
+# Not a target:
+charcode.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+semantics.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+parser.o: parser.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.338546974
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 17):
+	${CC} ${CFLAGS} parser.c
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+debug.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	rm -f *.o *~
+
+# Not a target:
+error.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+token.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+codegen.o: codegen.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:59.18655429
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 44):
+	${CC} ${CFLAGS} codegen.c
+
+main.o: main.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.234546078
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 11):
+	${CC} ${CFLAGS} main.c
+
+reader.o: reader.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.446547906
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 20):
+	${CC} ${CFLAGS} reader.c
+
+symtab.o: symtab.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-06 18:00:58.694550042
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 32):
+	${CC} ${CFLAGS} symtab.c
+
+# Not a target:
+parser.c:
+#  Implicit rule search has been done.
+#  Last modified 2015-02-10 04:25:54
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=30/1024=3%, Rehash=0, Collisions=1/79=1%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 46 / storage = 429 B / avg = 9 B
+# current buf: size = 8162 B / used = 429 B / count = 46 / avg = 9 B
+
+# strcache performance: lookups = 104 / hit rate = 55%
+# hash-table stats:
+# Load=46/8192=1%, Rehash=0, Collisions=1/104=1%
+# Finished Make data base on Sun Jul 24 11:49:17 2022
+
+ 

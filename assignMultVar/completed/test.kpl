@@ -1,0 +1,6 @@
+Program testPower;
+    Var x : integer;
+        n: integer;
+Begin
+    x := 2*n;
+End.
