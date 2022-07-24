@@ -1,0 +1,7 @@
+Program testPower;
+    Var x : integer;
+        n: integer;
+Begin
+    x := 2**5;
+    call writei(x);
+End.

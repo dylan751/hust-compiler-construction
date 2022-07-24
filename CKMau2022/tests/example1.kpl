@@ -1,0 +1,11 @@
+Program Example1; (* Example 1 *)
+    Var n : integer;
+        i : integer;
+        res: integer;
+Begin
+    n := readi;
+    res := 1;
+    for i:= 1 to n do
+        res := 2*res;
+    call writei(res);
+End. (* Example 1 *)

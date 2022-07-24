@@ -1,0 +1,27 @@
+bài 1: Thêm thép toán lấy mũ: 2**n -> 2^n
+b1: định nghĩa token ** là SB_POWER trong token.c, token.h
+b2: triển khai đọc token SB_POWER trong hàm getToken và printToken trong scanner.c
+b3: triển khai thêm luật để tính mũ trước vì phép toán mũ đc ưu tiên hơn phép +,- và *,/
+Term ::= Factor0 Term2
+
+Term2 ::= SB_TIMES Factor0 Term2
+Term2 ::= SB_SLASH Factor0 Term2
+Term2 ::= epsilon
+
+Factor0 ::= Factor Factor2
+
+Factor2 ::= SB_POWER Factor Factor2
+Factor2 ::= epsilon
+
+-> Thêm hàm compileFactor0, compileFactor2, sửa lại compileTerm, compileTerm2 trong parser.c, parser.h
+    Hàm compileFactor0 tương tự compileTerm -> copy lại y hệt, sửa lại cho đúng theo luật của Factor0
+    Hàm compileFacror2 tương tự compileTerm2 -> copy lại y hệt, sửa lại cho đúng theo luật của Factor2
+    		Thêm follow SB_TIMES, SB_SLASH, 
+    		thêm genPW()( -> sinh mã PW ) thay cho genML() trong compileTerm2
+  
+Để thêm lệnh PW thì thêm OP_PW trong instructon.c, .h, codegen.c, .h -> sao cho giống lệnh ML
+
+Trong interpreter tương tự: cũng thêm lệnh PW bằng các thêm OP_PW và các hàm tương ứng
+**Chú ý thứ tự khai báo OP_PW trong các file phải giống nhau
+
+Trong hàm Run: ở vm.c thêm case OP_PW: sử dụng hàm pow của C để thực thi
