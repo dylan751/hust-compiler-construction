@@ -1,0 +1,10 @@
+Program Example1; (* Example 1 *)
+Begin
+Call WriteC('D');
+Call WriteC('U');
+Call WriteC('A');
+Call WriteC('N');
+Call WriteC(' ');
+Call WriteC('L');
+Call WriteC('V');
+End. (* Example 1 *)
