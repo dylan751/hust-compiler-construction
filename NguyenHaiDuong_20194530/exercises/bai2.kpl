@@ -1,0 +1,19 @@
+program bai2;
+    var n : integer;
+        i : integer;
+        res : integer;
+
+begin
+    i := 1;
+    n := readi;
+    res := 1;
+
+    repeat
+        begin
+            res := 2 * res;
+            i := i + 1;
+        end
+    until i > n;
+
+    call writei(res);
+end.
