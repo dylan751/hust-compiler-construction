@@ -1,0 +1,10 @@
+program a;
+
+function f(x:integer):integer;
+    begin
+    f := x*x;
+    end;
+
+begin
+    call writeI(f(5));
+end.
