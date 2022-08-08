@@ -19,6 +19,7 @@
 - Form 3: Câu 3, 4
 
 ## Dạng bài tập:
+- Văn phạm nào ko nhập nhằng (là LL(1))
 - Giải thuật đệ quy quay lui: Stack D1, D2 (?)
 - Hoàn thiện code
 
